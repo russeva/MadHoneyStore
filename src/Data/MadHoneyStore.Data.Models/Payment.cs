@@ -1,8 +1,7 @@
 ﻿namespace MadHoneyStore.Data.Models
 {
     using MadHoneyStore.Data.Models.Enum;
-    using System;
-    using System.Collections.Generic;
+    
 
     public class Payment
     {
@@ -15,5 +14,9 @@
         public int CustomerId { get; set; }
 
         public ApplicationUser Customer { get; set; }
+
+        public int CardId { get; set; }
+
+        public virtual Cart Cart { get; set; }
     }
 }
