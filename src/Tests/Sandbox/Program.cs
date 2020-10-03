@@ -5,14 +5,14 @@
     using System.IO;
     using System.Threading.Tasks;
 
-    using AspNetCoreTemplate.Data;
-    using AspNetCoreTemplate.Data.Common;
-    using AspNetCoreTemplate.Data.Common.Repositories;
-    using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Data.Repositories;
-    using AspNetCoreTemplate.Data.Seeding;
-    using AspNetCoreTemplate.Services.Data;
-    using AspNetCoreTemplate.Services.Messaging;
+    using MadHoneyStore.Data;
+    using MadHoneyStore.Data.Common;
+    using MadHoneyStore.Data.Common.Repositories;
+    using MadHoneyStore.Data.Models;
+    using MadHoneyStore.Data.Repositories;
+    using MadHoneyStore.Data.Seeding;
+    using MadHoneyStore.Services.Data;
+    using MadHoneyStore.Services.Messaging;
 
     using CommandLine;
 
