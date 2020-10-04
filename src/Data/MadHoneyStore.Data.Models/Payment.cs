@@ -1,7 +1,8 @@
 ﻿namespace MadHoneyStore.Data.Models
 {
     using MadHoneyStore.Data.Models.Enum;
-    
+    using System;
+    using System.Collections.Generic;
 
     public class Payment
     {
