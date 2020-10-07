@@ -15,9 +15,11 @@
                 return;
             }
 
-
-            var newUser1 = new ApplicationUser()
+            var users = new List<ApplicationUser>()
             {
+
+             new ApplicationUser()
+                {
                 FullName = "Katya Ilieva",
                 UserName = "katiusha",
                 Email = "katya32@yahoo.com",
@@ -27,10 +29,8 @@
                 Password = "Qwerty000",
                 PhoneNumber = "+359878500759",
                 PhoneNumberConfirmed = true,
-
-            };
-
-            var newUser2 = new ApplicationUser()
+                },
+             new ApplicationUser()
             {
                 FullName = "Ivan Shopov",
                 UserName = "van33",
@@ -42,9 +42,8 @@
                 PhoneNumber = "+359897365296",
                 PhoneNumberConfirmed = true,
 
-            };
-
-            var newUser3 = new ApplicationUser()
+            },
+             new ApplicationUser()
             {
                 FullName = "Peter Sokolov",
                 UserName = "peet",
@@ -56,13 +55,14 @@
                 PhoneNumber = "+359886365975",
                 PhoneNumberConfirmed = true,
 
+            },
             };
-
-            await dbContext.ApplicationUsers.AddAsync(newUser1);
-            await dbContext.ApplicationUsers.AddAsync(newUser2);
-            await dbContext.ApplicationUsers.AddAsync(newUser3);
+            await dbContext.ApplicationUsers.AddRangeAsync(users);
 
         }
 
     }
 }
+
+
+
