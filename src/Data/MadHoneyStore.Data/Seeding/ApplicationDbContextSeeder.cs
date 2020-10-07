@@ -27,7 +27,7 @@
                           {
                               new RolesSeeder(),
                               new SettingsSeeder(),
-                              // new PaymentSeeder(),
+                              new ProductsSeeder(),
                               new UsersSeeder(),
                           };
 
