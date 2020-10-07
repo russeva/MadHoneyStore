@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MadHoneyStore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201005055801_AppUserModelModified")]
-    partial class AppUserModelModified
+    [Migration("20201007114855_ProductsModelUpdated")]
+    partial class ProductsModelUpdated
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -91,7 +91,8 @@ namespace MadHoneyStore.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FullName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -111,7 +112,8 @@ namespace MadHoneyStore.Data.Migrations
                         .HasMaxLength(256);
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -239,6 +241,9 @@ namespace MadHoneyStore.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Img")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")

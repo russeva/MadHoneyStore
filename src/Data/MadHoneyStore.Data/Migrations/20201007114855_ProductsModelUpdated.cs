@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MadHoneyStore.Data.Migrations
 {
-    public partial class AppUserModelModified : Migration
+    public partial class ProductsModelUpdated : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -99,10 +99,10 @@ namespace MadHoneyStore.Data.Migrations
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
-                    FullName = table.Column<string>(nullable: true),
+                    FullName = table.Column<string>(maxLength: 30, nullable: true),
                     Address = table.Column<string>(nullable: true),
                     City = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(maxLength: 20, nullable: true),
                     PaymentID = table.Column<int>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true)
@@ -253,6 +253,7 @@ namespace MadHoneyStore.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
+                    Img = table.Column<string>(nullable: true),
                     Price = table.Column<double>(nullable: false),
                     CartItemId = table.Column<int>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),

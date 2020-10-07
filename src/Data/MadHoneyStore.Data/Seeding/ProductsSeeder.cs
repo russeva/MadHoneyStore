@@ -6,7 +6,7 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    public class ProductsSeeder : ISeeder
+    public class ProductsSeeder //: ISeeder
     {
         //public Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)
         //{
