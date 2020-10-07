@@ -1,6 +1,7 @@
 ﻿namespace MadHoneyStore.Data.Seeding
 {
     using MadHoneyStore.Data.Models;
+    using MadHoneyStore.Data.Models.Enum;
     using Microsoft.EntityFrameworkCore.Internal;
     using System;
     using System.Collections.Generic;
@@ -20,6 +21,7 @@
                 new Product()
                 {
                     Title = "Mad Honey 100g",
+                    Category = CategoryType.Honey,
                     Price = 99.00,
                     Description = @"Our Mad Honey is exclusively sourced from the Himalayan (Nepal) mountains and is harvested in the Lamjung region by the Gurung Tribesmen.
                     Renowned for its unique full flavour, our Mad Honey is independently tested for its psycho-active properties, and also to show that it meets all purity and quality measurements and requirements.
@@ -28,6 +30,7 @@
                 new Product()
                 {
                     Title = "Mad Honey 150g",
+                    Category = CategoryType.Honey,
                     Price = 119.00,
                     Description = @"Our Mad Honey is exclusively sourced from the Himalayan (Nepal) mountains and is harvested in the Lamjung region by the Gurung Tribesmen.
                     Renowned for its unique full flavour, our Mad Honey is independently tested for its psycho-active properties, and also to show that it meets all purity and quality measurements and requirements.
@@ -36,6 +39,7 @@
                 new Product()
                 {
                     Title = "Mad Honey 250g",
+                    Category = CategoryType.Honey,
                     Price = 189.00,
                     Description = @"Our Mad Honey is exclusively sourced from the Himalayan (Nepal) mountains and is harvested in the Lamjung region by the Gurung Tribesmen.
                     Renowned for its unique full flavour, our Mad Honey is independently tested for its psycho-active properties, and also to show that it meets all purity and quality measurements and requirements.
@@ -44,6 +48,7 @@
                 new Product()
                 {
                     Title = "Mad Honey 500g",
+                    Category = CategoryType.Honey,
                     Price = 349.00,
                     Description = @"Our Mad Honey is exclusively sourced from the Himalayan (Nepal) mountains and is harvested in the Lamjung region by the Gurung Tribesmen.
                     Renowned for its unique full flavour, our Mad Honey is independently tested for its psycho-active properties, and also to show that it meets all purity and quality measurements and requirements.

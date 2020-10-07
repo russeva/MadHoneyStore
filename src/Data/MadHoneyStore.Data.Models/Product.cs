@@ -1,6 +1,7 @@
 ﻿namespace MadHoneyStore.Data.Models
 {
     using MadHoneyStore.Data.Common.Models;
+    using MadHoneyStore.Data.Models.Enum;
     using System;
 
     public class Product : IDeletableEntity
@@ -20,5 +21,7 @@
         public bool IsDeleted { get; set; }
 
         public DateTime? DeletedOn { get; set; }
+
+        public CategoryType Category { get; set; }
     }
 }

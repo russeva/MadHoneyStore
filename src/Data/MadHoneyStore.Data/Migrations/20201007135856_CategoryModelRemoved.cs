@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MadHoneyStore.Data.Migrations
 {
-    public partial class CategoriesModelCreated : Migration
+    public partial class CategoryModelRemoved : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,19 +23,6 @@ namespace MadHoneyStore.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetRoles", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Categories",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Categories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -270,7 +257,8 @@ namespace MadHoneyStore.Data.Migrations
                     Price = table.Column<double>(nullable: false),
                     CartItemId = table.Column<int>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    DeletedOn = table.Column<DateTime>(nullable: true)
+                    DeletedOn = table.Column<DateTime>(nullable: true),
+                    Category = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -382,9 +370,6 @@ namespace MadHoneyStore.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "Categories");
 
             migrationBuilder.DropTable(
                 name: "Products");

@@ -201,21 +201,6 @@ namespace MadHoneyStore.Data.Migrations
                     b.ToTable("CartItems");
                 });
 
-            modelBuilder.Entity("MadHoneyStore.Data.Models.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Name")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("MadHoneyStore.Data.Models.Payment", b =>
                 {
                     b.Property<int>("PaymentId")
@@ -248,6 +233,9 @@ namespace MadHoneyStore.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("CartItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Category")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedOn")
