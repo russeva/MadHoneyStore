@@ -4,6 +4,8 @@
     using System.Diagnostics;
     using System.Linq;
     using MadHoneyStore.Data;
+    using MadHoneyStore.Data.Common.Repositories;
+    using MadHoneyStore.Data.Models;
     using MadHoneyStore.Data.Models.Enum;
     using MadHoneyStore.Web.ViewModels;
     using MadHoneyStore.Web.ViewModels.Home;
@@ -11,10 +13,12 @@
 
     public class HomeController : BaseController
     {
-        private readonly ApplicationDbContext db;
-        public HomeController(ApplicationDbContext db)
+        private readonly IDeletableEntityRepository<Product> productsRepository;
+
+        public HomeController(IDeletableEntityRepository<Product> productsRepository)
         {
-            this.db = db;
+            
+            this.productsRepository = productsRepository;
         }
 
         public IActionResult Index()
@@ -31,8 +35,7 @@
                 })
                 .ToList();
 
-            var products = this.db
-                .Products
+            var products = this.productsRepository.All()
                 .Select(p => new IndexProductViewModel()
                 {
                     Title = p.Title,

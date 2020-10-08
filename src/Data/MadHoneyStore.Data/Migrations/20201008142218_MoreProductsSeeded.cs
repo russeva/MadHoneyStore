@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MadHoneyStore.Data.Migrations
 {
-    public partial class CategoryModelRemoved : Migration
+    public partial class MoreProductsSeeded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
