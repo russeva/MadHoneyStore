@@ -1,9 +1,33 @@
 ﻿@using MadHoneyStore.Common
+@model MadHoneyStore.Web.ViewModels.Home.IndexViewModel
 @{
-    this.ViewData["Title"] = "Home Page";
+    this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<body>
+    <div>
+        <h1 class="display" style="text-align:center">@this.ViewData["Title"]</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach (var products in Model.Products)
+            {
+                <div class="col-sm-3 media">
+                    <div class="card-deck">
+                        <div class="card border-info mb-3">
+                            <img src="@products.Image" width="100 " class="card-img-top" alt="@products.Title">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="@products.Url">@products.Title</a></h5>
+                                <p class="card-text">@products.Description</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+
+
